@@ -1,0 +1,32 @@
+! Title: YouTube Shorts Block
+! Description: Hides YouTube Shorts.
+! Homepage: https://github.com/rwitesh/youtube-shorts-block
+! Version: 2026.11.23
+! Expires: 7 days
+
+! Navigation: sidebar entry (desktop), narrow sidebar (tablet) and bottom bar tab (mobile)
+youtube.com##ytd-guide-entry-renderer:has(a[title="Shorts"])
+youtube.com##ytd-mini-guide-entry-renderer:has(a[title="Shorts"])
+youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+
+! Shelves on home, search, hashtag and channel pages
+youtube.com##ytd-rich-shelf-renderer[is-shorts]
+youtube.com##ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model)
+youtube.com##grid-shelf-view-model:has(ytm-shorts-lockup-view-model)
+youtube.com##ytm-shorts-lockup-view-model
+
+! Single Shorts inside feeds and search results
+youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
+youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
+youtube.com##ytm-rich-item-renderer:has(a[href^="/shorts/"])
+youtube.com##ytm-video-with-context-renderer:has(a[href^="/shorts/"])
+
+! Channel "Shorts" tab, and "Shorts" filter chip
+youtube.com##yt-tab-shape[tab-title="Shorts"]
+youtube.com##yt-chip-cloud-chip-renderer:has-text(/^Shorts$/)
+youtube.com##chip-shape:has-text(/^Shorts$/)
+
+! Shorts player page
+youtube.com##ytd-shorts
+youtube.com##ytd-reel-video-renderer
+youtube.com##shorts-page
